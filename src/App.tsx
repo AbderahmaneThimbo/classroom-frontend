@@ -11,7 +11,7 @@ import "./App.css";
 import { Toaster } from "./components/refine-ui/notification/toaster";
 import { useNotificationProvider } from "./components/refine-ui/notification/use-notification-provider";
 import { ThemeProvider } from "./components/refine-ui/theme/theme-provider";
-import { dataProvider } from "./providers/data";
+import { dataProviders } from "./providers/data";
 import Dashboard from "@/pages/dashboard.tsx";
 import {BookOpen, Home} from "lucide-react";
 import {Layout} from "@/components/refine-ui/layout/layout.tsx";
@@ -26,7 +26,7 @@ function App() {
         <ThemeProvider>
           <DevtoolsProvider>
             <Refine
-              dataProvider={dataProvider}
+              dataProvider={dataProviders}
               notificationProvider={useNotificationProvider()}
               routerProvider={routerProvider}
               options={{
